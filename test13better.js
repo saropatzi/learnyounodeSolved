@@ -13,7 +13,7 @@ var routes = {
     "/api/unixtime": function(parsedUrl) {
         return {unixtime: (new Date(parsedUrl.query.iso)).getTime()};
     }
-}
+};
 
 server = http.createServer(function(request, response) {
     parsedUrl = url.parse(request.url, true);
